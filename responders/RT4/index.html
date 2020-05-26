@@ -1892,11 +1892,9 @@ https://www.org.local
 <p>Greater numbered config options take precedence over smaller ones.</p>
 <p><em>Example:</em></p>
 <p>If a tag_to_template map at the Org Responder config in Cortex is set to map tags of <code>phishing</code> to the <code>phishing_generic</code> template, but a <code>set_rt4_template:phishing_spear</code> tag on the observable sets a different template, the observable tag takes precedence.</p>
-<p>```</p>
-<p>test 4
+<p><code>test 4
 blah 
-test toto</p>
-<p>```</p>
+test toto</code></p>
 <h3 id="observable-object-data">Observable Object Data<a class="headerlink" href="#observable-object-data" title="Permanent link">#</a></h3>
 <p>Observables are a custom dictionary in which their properties are stored. In addition to the ticket properties passed to RT, each observable is also tagged with its case/artifact info which makes available the following info in each observable:</p>
 <p><code>json
