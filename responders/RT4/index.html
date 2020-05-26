@@ -1696,40 +1696,40 @@ https://www.org.local
 <p>Observables are a custom dictionary in which their properties are stored. In addition to the ticket properties passed to RT, each observable is also tagged with its case/artifact info which makes available the following info in each observable:</p>
 <p><code>json
 "owner": "michael",
-    "severity": 2,
-    "_routing": "AWxyhvveZCXO8BqIWSLs",
-    "flag": false,
-    "updatedBy": "michael",
-    "customFields": {
-      "RTTicket": {
-        "string": "http://192.168.0.2/Ticket/Display.html?id=141, http://192.168.0.2/Ticket/Display.html?id=142, http://192.168.0.2/Ticket/Display.html?id=143"
-      }
-    },
-    "_type": "case",
-    "description": "test",
-    "title": "RT-testing",
-    "tags": [
-      "contact:requestor@domain.tld",
-      "rt4:submitted"
-    ],
-    "createdAt": 1565289544365,
-    "_parent": null,
-    "createdBy": "michael",
-    "caseId": 1,
-    "tlp": 2,
-    "metrics": {
-      "seen_prior": 1
-    },
-    "_id": "AWxyhvveZCXO8BqIWSLs",
-    "id": "AWxyhvveZCXO8BqIWSLs",
-    "_version": 45,
-    "startDate": 1565289480000,
-    "pap": 2,
-    "status": "Open",
-    "updatedAt": 1570482005825,
-    "indicator_list": [
-      "malicious.baddomain.tld"
-    ]</code>
+"severity": 2,
+"_routing": "AWxyhvveZCXO8BqIWSLs",
+"flag": false,
+"updatedBy": "michael",
+"customFields": {
+  "RTTicket": {
+    "string": "http://192.168.0.2/Ticket/Display.html?id=141, http://192.168.0.2/Ticket/Display.html?id=142, http://192.168.0.2/Ticket/Display.html?id=143"
+  }
+},
+"_type": "case",
+"description": "test",
+"title": "RT-testing",
+"tags": [
+  "contact:requestor@domain.tld",
+  "rt4:submitted"
+],
+"createdAt": 1565289544365,
+"_parent": null,
+"createdBy": "michael",
+"caseId": 1,
+"tlp": 2,
+"metrics": {
+  "seen_prior": 1
+},
+"_id": "AWxyhvveZCXO8BqIWSLs",
+"id": "AWxyhvveZCXO8BqIWSLs",
+"_version": 45,
+"startDate": 1565289480000,
+"pap": 2,
+"status": "Open",
+"updatedAt": 1570482005825,
+"indicator_list": [
+  "malicious.baddomain.tld"
+]</code>
 Those properties can all be referenced as variables in the jinja2 template as mentioned in the <a href="#Templates">Templates section</a>.</p>
 </div>
 <h2 id="rt4-createticket">RT4-CreateTicket<a class="headerlink" href="#rt4-createticket" title="Permanent link">#</a></h2>
