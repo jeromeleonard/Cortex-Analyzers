@@ -15,7 +15,7 @@
     
     
       
-        <title>How to Write and Submit an Analyzer - Cortex Neurons documentation</title>
+        <title>How to write an Analyzer - Cortex Neurons documentation</title>
       
     
     
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              How to Write and Submit an Analyzer
+              How to write an Analyzer
             
           </span>
         </div>
@@ -1563,10 +1563,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       Developers guides
@@ -1600,11 +1602,402 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../responders_definition.md" title="Responder definition" class="md-nav__link">
-      Responder definition
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        How to write an Analyzer
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="How to write an Analyzer" class="md-nav__link md-nav__link--active">
+      How to write an Analyzer
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#writing-an-analyzer" class="md-nav__link">
+    Writing an Analyzer
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing an Analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-program" class="md-nav__link">
+    The Program
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-interaction-files-flavors" class="md-nav__link">
+    Service Interaction Files (Flavors)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-requirements" class="md-nav__link">
+    Python Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-virustotal-analyzer-files" class="md-nav__link">
+    Example: VirusTotal Analyzer Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    Input
+  </a>
+  
+    <nav class="md-nav" aria-label="Input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-virustotal-get-reports-input" class="md-nav__link">
+    Example: VirusTotal Get Report's Input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-service-interaction-file-for-virustotal-getreport" class="md-nav__link">
+    Example: Service Interaction File for VirusTotal GetReport
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-interaction-configuration-items" class="md-nav__link">
+    Service Interaction Configuration Items
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Interaction Configuration Items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    license
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datatypelist" class="md-nav__link">
+    dataTypeList
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#baseconfig" class="md-nav__link">
+    baseConfig
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    config
+  </a>
+  
+    <nav class="md-nav" aria-label="config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#max_tlp" class="md-nav__link">
+    max_tlp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_tlp" class="md-nav__link">
+    check_tlp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#max_pap" class="md-nav__link">
+    max_pap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check_pap" class="md-nav__link">
+    check_pap
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command" class="md-nav__link">
+    command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configurationitems" class="md-nav__link">
+    configurationItems
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cortexutils-python-library" class="md-nav__link">
+    The Cortexutils Python Library
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#report-templates" class="md-nav__link">
+    Report Templates
+  </a>
+  
+    <nav class="md-nav" aria-label="Report Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cortex-result-in-thehive" class="md-nav__link">
+    Cortex Result in TheHive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#displayed-information" class="md-nav__link">
+    Displayed Information
+  </a>
+  
+    <nav class="md-nav" aria-label="Displayed Information">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-no-template-is-imported" class="md-nav__link">
+    When No Template is Imported
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-templates-are-imported" class="md-nav__link">
+    When Templates are Imported
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-templates" class="md-nav__link">
+    Writing Templates
+  </a>
+  
+    <nav class="md-nav" aria-label="Writing Templates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-report-templates-shorthtml" class="md-nav__link">
+    Short Report Templates (short.html)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-report-templates-longhtml" class="md-nav__link">
+    Long Report Templates (long.html)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submitting-an-analyzer" class="md-nav__link">
+    Submitting an Analyzer
+  </a>
+  
+    <nav class="md-nav" aria-label="Submitting an Analyzer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-existing-issues" class="md-nav__link">
+    Check Existing Issues
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-an-issue" class="md-nav__link">
+    Open an Issue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review-your-service-interaction-files" class="md-nav__link">
+    Review your Service Interaction File(s)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-the-list-of-requirements" class="md-nav__link">
+    Provide the List of Requirements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-taxonomy" class="md-nav__link">
+    Check the Taxonomy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provide-global-configuration-parameters" class="md-nav__link">
+    Provide Global Configuration Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verify-execution" class="md-nav__link">
+    Verify Execution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-pull-request" class="md-nav__link">
+    Create a Pull Request
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#need-help" class="md-nav__link">
+    Need Help?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -2560,6 +2953,27 @@ join our <a href="https://groups.google.com/a/thehive-project.org/forum/#!forum/
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../analyzers_definition/" title="Analyzer definition" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Analyzer definition
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
